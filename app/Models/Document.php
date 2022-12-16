@@ -15,11 +15,11 @@ class Document extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'code', 'attachments', 'attachment_file_names'];
+    protected $fillable = ['name', 'code', 'attachments', 'attachment_file_names', 'thumb'];
 
     protected $casts = [
         'attachments' => 'array',
-        'attachment_file_names' => 'array',
+        // 'attachment_file_names' => 'array',
     ];
 
     /**

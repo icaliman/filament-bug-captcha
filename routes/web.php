@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\TestCaptcha;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', TestCaptcha::class);
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
