@@ -3,19 +3,17 @@
 namespace App\Http\Livewire;
 
 use AbanoubNassem\FilamentGRecaptchaField\Forms\Components\GRecaptcha;
-use Exception;
+use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Livewire\Component;
-use Filament\Forms;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Validation\Rule;
 
 class TestCaptcha extends Component implements HasForms
 {
     use InteractsWithForms;
 
     public $email;
+
     public $captcha = '';
 
     public $submited = false;
@@ -23,7 +21,7 @@ class TestCaptcha extends Component implements HasForms
     public function mount(): void
     {
         $this->form->fill([
-            'email' => '',
+            'email' => 'test@gmail.com',
             'captcha' => '',
         ]);
     }
